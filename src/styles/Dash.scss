@@ -2,11 +2,13 @@ $blue: #213F7D;
 $grey: #545F7D;
 $teal: #39CDCC;
 
+body {
+    font-family: 'work sans'
+}
 
 .dashboard { 
     display: flex;
     flex-direction: column;
-    font-family: 'avenir next';
 }
 
 nav {
@@ -39,4 +41,42 @@ nav {
 
 .docs {
     color: $blue;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-left: 30px;
+}
+
+.nav-item {
+    padding: 14px 14px 14px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 16px;
+}
+
+.nav-item span {
+    color: $blue;
+    font-weight: 400;
+}
+
+.label {
+    padding-bottom: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    color: $grey;
+}
+
+.top {
+    padding-top: 16px;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
 }
