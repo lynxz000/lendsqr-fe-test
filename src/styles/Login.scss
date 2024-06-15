@@ -1,0 +1,207 @@
+@import 'variables';
+@import 'mixins';
+
+
+input {
+    font-family: 'avenir next';
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    font-family: 'avenir next';
+    justify-content: stretch;
+    align-items: flex-start;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    
+    @include respond-to(medium) {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        overflow-x: hidden;
+
+    }
+
+    @include respond-to(small) {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        overflow-x: hidden;
+
+
+    }
+    
+}
+
+.bg {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+    width: 50%;
+    @include respond-to(medium) {
+        order: 1;
+        align-items: center;
+    }
+
+}
+
+.logo {
+    padding-top: 0px;
+        padding-bottom: 50px;
+
+    @include respond-to(small) {
+        padding-top: 0px;
+        padding-left: 0px;
+    }
+
+    @include respond-to(medium) {
+        padding-top: 0px;
+        padding-bottom: 50px;
+    }
+}
+
+.illus {
+    justify-content: center;
+    padding-top: 45%;
+
+    @include respond-to(small) {
+        align-self: center;
+        padding-top: 0;
+        padding-bottom: 30%;
+    }
+    
+    @include respond-to(medium) {
+        align-self: center;
+        padding-top: 0;
+        padding-bottom: 30%;
+    }
+    
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: flex-start;
+    width: 50%;
+    flex-shrink: 0;
+    height: 100vh;
+    box-shadow: 0px 15px 90px 0px #00000008;
+
+    @include respond-to(medium) {
+        width: 100vh;
+        box-shadow: none;
+
+    }
+    
+    @include respond-to(small) {
+        width: 100vh;
+        box-shadow: none;
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    @include respond-to(medium) {
+        justify-content: flex-start;
+        padding-top: 150px;
+    }
+    
+    @include respond-to(small) {
+        justify-content: flex-start;
+        padding-top: 150px;
+    }
+}
+
+.welcome {
+    width: 447px;
+    color: $blue;
+    font-weight: 700;
+    font-size: 40px;
+    letter-spacing: -2px;
+
+    @include respond-to(small) {
+        width: 350px;
+    }
+}
+
+.details {
+    color: $grey;
+    width: 447px;
+    padding-top: 20px;
+    font-weight: 400;
+    font-size: 20px;
+    @include respond-to(small) {
+        width: 350px;
+    }
+}
+
+.text-field {
+    display: flex;
+    flex-direction: column;
+    padding-top: 88px;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.field{
+    display: inline-block;
+    height: 50px;
+    width: 447px;
+    border: 2px solid;
+    box-sizing: content-box;
+    border-color: rgba(84, 95, 125, 0.1);
+    padding: 0px;
+    border-radius: 5px;
+    font-size: 14px;
+    flex-shrink: 1;
+    @include respond-to(small) {
+        width: 350px;
+    }
+}
+
+.field:focus {
+    border: 2px solid $teal;
+    box-shadow: none;
+    outline: none;
+}
+
+.field::placeholder{
+   padding: 16px;
+}
+.link {
+    text-decoration: none;
+    color: $teal;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.lg-button{
+    display: inline-block;
+    height: 50px;
+    width: 447px;
+    padding: 0px;
+    margin-top: 20px;
+    border: 2px solid;
+    border-color: $teal;
+    border-radius: 5px;
+    box-sizing: content-box;
+    background-color: #39CDCC;
+    font-family: 'avenir next';
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    color: white;
+
+    @include respond-to(small) {
+        width: 350px;
+    }
+}
